@@ -1,0 +1,18 @@
+<div class="comments-wrapper">
+  <div class="comments">
+    <div class="comments__item" *ngFor="let comment of objectComment.comments">
+      <button class="comments__btn-delete" (click)="onDelete(comment)">delete</button>
+      <p>{{comment.text}}</p>
+    </div>
+  </div>
+
+  <form class="comment-form" [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+    <textarea class="comment-form__textarea" formControlName="text"></textarea>
+    <button class="comment-form__submit" type="submit">Submit</button>
+  </form>
+
+  <ng-container *ngIf="objectComment.subComments.comments?.length">
+    <app-comment [objectComment]="objectComment.subComments"></app-comment>
+  </ng-container>
+</div>
+

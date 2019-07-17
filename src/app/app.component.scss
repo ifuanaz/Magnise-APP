@@ -1,0 +1,16 @@
+.container {
+  padding: 10px 30px 10px 5px;
+}
+
+.filter-comments {
+  padding: 15px 30px;
+  width: 100%;
+
+  input {
+    outline: none;
+    border: none;
+    padding: 15px;
+    font-size: .8em;
+    min-width: 250px;
+  }
+}
